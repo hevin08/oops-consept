@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2 -->
+    <!-- <div id="table-container"></div> -->
+    <script>
+
+        // --1--
+
+        // class Student {
+        //     constructor(physics, chemistry, biology, mathematics, computer) {
+        //         this.physics = physics;
+        //         this.chemistry = chemistry;
+        //         this.biology = biology;
+        //         this.mathematics = mathematics;
+        //         this.computer = computer;
+        //     }
+
+        //     calculatePercentage() {
+        //         const totalMarks = this.physics + this.chemistry + this.biology + this.mathematics + this.computer;
+        //         const percentage = (totalMarks / 500) * 100;
+        //         return percentage;
+        //     }
+
+        //     calculateGrade() {
+        //         const percentage = this.calculatePercentage();
+        //         let grade;
+
+        //         if (percentage >= 90) {
+        //             grade = 'A';
+        //         } else if (percentage >= 80) {
+        //             grade = 'B';
+        //         } else if (percentage >= 70) {
+        //             grade = 'C';
+        //         } else if (percentage >= 60) {
+        //             grade = 'D';
+        //         } else if (percentage >= 50) {
+        //             grade = 'E';
+        //         } else if (percentage >= 40) {
+        //             grade = 'F';
+        //         } else {
+        //             grade = 'Fail';
+        //         }
+
+        //         return grade;
+        //     }
+
+        //     displayResult() {
+        //         const percentage = this.calculatePercentage();
+        //         const grade = this.calculateGrade();
+        //         console.log(`Percentage: ${percentage.toFixed(2)}%`);
+        //         console.log(`Grade: ${grade}`);
+        //     }
+        // }
+
+        // const student = new Student(85, 78, 92, 88, 76);
+        // student.displayResult();
+
+        // --2--
+
+        // class TableGenerator {
+        //     constructor(data) {
+        //         this.data = data;
+        //     }
+
+        //     generateTable() {
+        //         let table = '<table border="1">';
+        //         table += '<tr><th>Name</th><th>Email</th><th>Phone</th></tr>';
+
+        //         this.data.forEach(item => {
+        //             table += `<tr>
+        //                         <td>${item.name}</td>
+        //                         <td>${item.email}</td>
+        //                         <td>${item.phone}</td>
+        //                       </tr>`;
+        //         });
+
+        //         table += '</table>';
+        //         return table;
+        //     }
+
+        //     renderTable(containerId) {
+        //         const container = document.getElementById(containerId);
+        //         if (container) {
+        //             container.innerHTML = this.generateTable();
+        //         } else {
+        //             console.error(`Container with id "${containerId}" not found.`);
+        //         }
+        //     }
+        // }
+
+        // let data = [
+        //     { name: "jay", email: "jay@gmail.com", phone: "12345" },
+        //     { name: "ajay", email: "ajay@gmail.com", phone: "12345" },
+        //     { name: "vijay", email: "vijay@gmail.com", phone: "12345" },
+        //     { name: "ashish", email: "ashish@gmail.com", phone: "12345" },
+        // ];
+
+        // const tableGenerator = new TableGenerator(data);
+        // tableGenerator.renderTable('table-container');
+
+        // --3--
+
+        // class MultiplicationTable {
+        //     constructor(number) {
+        //         this.number = number;
+        //     }
+
+        //     printTable() {
+        //         let i = 1;
+        //         do {
+        //             console.log(`${this.number} x ${i} = ${this.number * i}`);
+        //             i++;
+        //         } while (i <= 10);
+        //     }
+        // }
+
+        // const number = 5;
+        // const multiplicationTable = new MultiplicationTable(number);
+        // multiplicationTable.printTable();
+
+
+        // 4
+
+        // class Employee {
+        //     constructor(name, salary, hireDate) {
+        //         this.name = name;
+        //         this.salary = salary;
+        //         this.hireDate = new Date(hireDate);
+        //     }
+
+        //     calculateYearsOfService() {
+        //         const currentDate = new Date();
+        //         const yearsOfService = currentDate.getFullYear() - this.hireDate.getFullYear();
+        //         const monthDifference = currentDate.getMonth() - this.hireDate.getMonth();
+        //         const dayDifference = currentDate.getDate() - this.hireDate.getDate();
+
+        //         if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+        //             return yearsOfService - 1;
+        //         }
+        //         return yearsOfService;
+        //     }
+
+        //     getEmployeeDetails() {
+        //         return `Name: ${this.name}, Salary: ${this.salary}, Hire Date: ${this.hireDate.toDateString()}, Years of Service: ${this.calculateYearsOfService()}`;
+        //     }
+        // }
+
+        // const employee = new Employee('John Doe', 50000, '2015-06-15');
+        // console.log(employee.getEmployeeDetails());
+
+        // 5
+
+        // class Library {
+        //     constructor() {
+        //         this.books = [];
+        //     }
+
+        //     addBook(book) {
+        //         this.books.push(book);
+        //         console.log(`Book titled "${book.title}" by ${book.author} added to the library.`);
+        //     }
+
+        //     removeBook(title) {
+        //         const index = this.books.findIndex(book => book.title === title);
+        //         if (index !== -1) {
+        //             const removedBook = this.books.splice(index, 1)[0];
+        //             console.log(`Book titled "${removedBook.title}" by ${removedBook.author} removed from the library.`);
+        //         } else {
+        //             console.log(`Book titled "${title}" not found in the library.`);
+        //         }
+        //     }
+
+        //     listBooks() {
+        //         if (this.books.length === 0) {
+        //             console.log("No books in the library.");
+        //         } else {
+        //             console.log("Books in the library:");
+        //             this.books.forEach(book => {
+        //                 console.log(`- "${book.title}" by ${book.author}`);
+        //             });
+        //         }
+        //     }
+        // }
+
+        // const library = new Library();
+
+        // const book1 = { title: "To Kill a Mockingbird", author: "Harper Lee" };
+        // const book2 = { title: "1984", author: "George Orwell" };
+        // const book3 = { title: "The Great Gatsby", author: "F. Scott Fitzgerald" };
+
+        // library.addBook(book1);
+        // library.addBook(book2);
+        // library.addBook(book3);
+
+        // library.listBooks();
+
+        // library.removeBook("1984");
+        // library.listBooks();
+
+        // library.removeBook("Moby Dick");
+
+        // 6
+
+        // class Restaurant {
+        //     constructor() {
+        //         this.menu = [];
+        //     }
+
+        //     addItem(name, price, rating) {
+        //         const item = { name, price, rating };
+        //         this.menu.push(item);
+        //         console.log(`Item "${name}" added to the menu with price $${price} and rating ${rating}.`);
+        //     }
+
+        //     removeItem(name) {
+        //         const index = this.menu.findIndex(item => item.name === name);
+        //         if (index !== -1) {
+        //             const removedItem = this.menu.splice(index, 1)[0];
+        //             console.log(`Item "${removedItem.name}" removed from the menu.`);
+        //         } else {
+        //             console.log(`Item "${name}" not found in the menu.`);
+        //         }
+        //     }
+
+        //     calculateAverageRating() {
+        //         if (this.menu.length === 0) {
+        //             return 0;
+        //         }
+        //         const totalRating = this.menu.reduce((sum, item) => sum + item.rating, 0);
+        //         return totalRating / this.menu.length;
+        //     }
+
+        //     listMenu() {
+        //         if (this.menu.length === 0) {
+        //             console.log("No items in the menu.");
+        //         } else {
+        //             console.log("Menu items:");
+        //             this.menu.forEach(item => {
+        //                 console.log(`- "${item.name}" - Price: $${item.price}, Rating: ${item.rating}`);
+        //             });
+        //         }
+        //     }
+        // }
+
+        // const restaurant = new Restaurant();
+
+        // restaurant.addItem("Pasta", 12.99, 4.5);
+        // restaurant.addItem("Pizza", 9.99, 4.7);
+        // restaurant.addItem("Salad", 7.99, 4.2);
+
+        // restaurant.listMenu();
+
+        // console.log(`Average Rating: ${restaurant.calculateAverageRating().toFixed(2)}`);
+
+        // restaurant.removeItem("Pizza");
+        // restaurant.listMenu();
+
+        // console.log(`Average Rating: ${restaurant.calculateAverageRating().toFixed(2)}`);
+
+        // restaurant.removeItem("Burger");
+
+
+    </script>
+</body>
+
+</html>
